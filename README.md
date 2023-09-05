@@ -6,7 +6,9 @@ In this project I use the Meteorite Landing dataset found on on NASA's Open Data
 run ```npm create vite@latest frontend -- --template react``` to create the React app
 
 ### Backend
-run ```nvm use node```
+run
+```nvm use node```
 ```npm init -y```
 ```npm add jest```
+``` npm install express mongoose axios```
 
