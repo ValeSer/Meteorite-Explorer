@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
+const axios = require('axios');
 
 app.get("/", (req, res) => {
-  res.send('Hello');
+  axios.get('https://data.nasa.gov/resource/gh4g-9sfh.json')
+    .then((response) => {
+      res.send(response.data);
+    })
 });
 
 app.listen(8080, () => {
