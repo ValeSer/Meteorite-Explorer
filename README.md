@@ -10,5 +10,6 @@ run
 ```nvm use node```
 ```npm init -y```
 ```npm add jest```
-``` npm install express mongoose axios```
+```npm install express mongoose axios```
+```npm install --save-dev nodemon```
 
