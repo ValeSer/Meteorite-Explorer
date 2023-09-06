@@ -1,6 +1,7 @@
 import './Home.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Meteorite from '../Meteorite/Meteorite';
 
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
@@ -11,9 +12,10 @@ const Home = () => {
         {
           meteorites.map((met) => {
             return (
-              <div key={met.id}>
-                {met.name}
-              </div>
+              <Meteorite 
+                key={met.id}
+                data={met}
+              />
             
             )
           })
