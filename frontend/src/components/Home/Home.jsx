@@ -1,7 +1,11 @@
 import './Home.scss';
 
 const Home = () => {
-  return 'Hello';
+  return (
+    <>
+      Hello from Home
+    </>
+  )
 }
 
-export { Home };
+export default Home ;

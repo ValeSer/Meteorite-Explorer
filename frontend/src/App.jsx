@@ -1,4 +1,4 @@
-
+import Home from './components/Home/Home';
 import './App.scss'
 
 function App() {
@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      hello
+      <Home />
     </>
   )
 }
 
-export default App
+export default App ;
