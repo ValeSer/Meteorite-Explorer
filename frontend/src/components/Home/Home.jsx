@@ -16,7 +16,6 @@ const Home = () => {
                 data={met}
                 key={met.id}
               />
-            
             )
           })
         }
