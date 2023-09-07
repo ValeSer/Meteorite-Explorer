@@ -1,0 +1,16 @@
+.row {
+  background-color: pink;
+  padding: 3px;
+  border-color: blue;
+  margin: 2px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+ 
+    div {
+      width: 150px;
+      margin: 1px;
+      border:1px;
+
+    }
+}
