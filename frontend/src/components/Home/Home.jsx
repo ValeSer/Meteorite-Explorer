@@ -13,8 +13,8 @@ const Home = () => {
           meteorites.map((met) => {
             return (
               <Meteorite 
-                key={met.id}
                 data={met}
+                key={met.id}
               />
             
             )
