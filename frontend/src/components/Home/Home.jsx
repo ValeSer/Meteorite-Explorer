@@ -2,6 +2,7 @@ import './Home.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Table from '../Table/Table';
+import Search from '../Search/Search';
 
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
@@ -21,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      
+      <Search />
       <Table meteorites={meteorites}/>
     </>
   )
