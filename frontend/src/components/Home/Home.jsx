@@ -1,28 +1,11 @@
 import './Home.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Meteorite from '../Meteorite/Meteorite';
+import Table from '../Table/Table';
 
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
-
-  const renderMeteorites = () => {
-    return (
-      <div className='met-table-container'>
-        {
-          meteorites.map((met) => {
-            return (
-              <Meteorite 
-                data={met}
-                key={met.id}
-              />
-            )
-          })
-        }
-      </div>
-    )
-  }
-
+  
   useEffect(() => {
       axios.get('http://localhost:8080')
         .then((response) => {
@@ -38,10 +21,8 @@ const Home = () => {
 
   return (
     <>
-      <div>
-        {renderMeteorites()}
-      </div>
       
+      <Table meteorites={meteorites}/>
     </>
   )
 }
