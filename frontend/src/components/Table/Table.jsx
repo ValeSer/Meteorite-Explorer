@@ -4,11 +4,11 @@ import Meteorite from '../Meteorite/Meteorite'
 const Table = (props) => {
    
   const renderMeteorites = () => {
-  
+    const orderedMeteorites = props.meteorites.sort((a,b) => (a.name > b.name)  )
     return (
       <div className='met-table-container'>
         {
-          props.meteorites.map((met) => {
+          orderedMeteorites.map((met) => {
             return (
               <Meteorite 
                 data={met}
@@ -29,6 +29,3 @@ const Table = (props) => {
 }
 
 export default Table;
-
-
-
