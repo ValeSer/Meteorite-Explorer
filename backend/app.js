@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.get("/", (req, res) => {
-  axios.get('https://data.nasa.gov/resource/gh4g-9sfh.json')
+  axios.get('https://data.nasa.gov/resource/gh4g-9sfh.json?$order=name')
     .then((response) => {
       res.send(response.data);
     })
