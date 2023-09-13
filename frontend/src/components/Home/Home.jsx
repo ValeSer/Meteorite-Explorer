@@ -7,12 +7,9 @@ import Search from '../Search/Search';
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
 
-  const searchMeteorites = (query) => {
-    console.log(query);
-  }
-  
-  useEffect(() => {
-      axios.get('http://localhost:8080')
+  const searchMeteorites = (searchTerm) => {
+    
+    axios.get('http://localhost:8080', {params: {searchTerm: searchTerm}})
         .then((response) => {
           //if(response.status !== 200)throw new Error('Failed to fetch');
           setMeteorites(response.data);
@@ -21,6 +18,10 @@ const Home = () => {
         .catch(error => {
           console.error('error', error);
         });
+      }
+  
+  useEffect(() => {
+      searchMeteorites('')
   }, []);
    
 
