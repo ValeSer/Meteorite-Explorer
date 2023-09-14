@@ -10,6 +10,9 @@ app.get("/", (req, res) => {
     .then((response) => {
       res.send(response.data);
     })
+    .catch(function (error) {
+      console.log(error.toJSON());
+    });
 });
 
 app.listen(8080, () => {
