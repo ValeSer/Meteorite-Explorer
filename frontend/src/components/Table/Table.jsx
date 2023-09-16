@@ -24,7 +24,15 @@ const Table = (props) => {
   return (
     <>
       <div className='table-header row'>
-        header
+        <p>Name</p>
+        <p>Id</p>
+        <p>Name Type</p>
+        <p>Rec Class</p>
+        <p>Mass(g)</p>
+        <p>Fall</p>
+        <p>Year</p>
+        <p>Latitude</p>
+        <p>Longitude</p>
       </div>
       <div>
           {renderMeteorites()}
