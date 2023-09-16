@@ -7,6 +7,7 @@ const Table = (props) => {
     
     return (
       <div className='met-table-container'>
+        
         {
           props.meteorites.map((met) => {
             return (
@@ -21,9 +22,14 @@ const Table = (props) => {
     )
   }
   return (
-    <div>
-        {renderMeteorites()}
-    </div>
+    <>
+      <div className='table-header row'>
+        header
+      </div>
+      <div>
+          {renderMeteorites()}
+      </div>
+    </>
   )
   
 }
