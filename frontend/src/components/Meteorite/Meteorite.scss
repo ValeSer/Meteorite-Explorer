@@ -1,5 +1,5 @@
 .row {
-  background-color: pink;
+  background-color: lightgray;
   padding: 3px;
   border-color: blue;
   border: 30px;
@@ -7,16 +7,17 @@
   display: flex;
   flex-direction: row;
  
-    div {
-      width: 150px;
-      margin: 1px;
-      border:1px;  
-    }
+  div {
+    width: 150px;
+    margin: 1px;
+    border:1px;  
+  }
 
-    .mass, .name {
-      display: flex;
-      width: 200px;
-    }
+  .mass, .name {
+    display: flex;
+    width: 200px;
+  }
     
+  &:nth-child(even) {background: white}
     
 }
