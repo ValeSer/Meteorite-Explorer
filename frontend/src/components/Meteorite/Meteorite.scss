@@ -10,12 +10,13 @@
     div {
       width: 150px;
       margin: 1px;
-      border:1px;
-
-        
+      border:1px;  
     }
-    .name .year {
+
+    .mass, .name {
       display: flex;
       width: 200px;
     }
+    
+    
 }
