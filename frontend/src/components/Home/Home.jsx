@@ -28,8 +28,10 @@ const Home = () => {
   return (
     <>
       <h1 className='title'>Meteorite Explorer</h1>
-      <Search searchMeteorites={searchMeteorites}/>
-      <Table meteorites={meteorites}/>
+      <div className='home-container'>
+        <Search searchMeteorites={searchMeteorites}/>
+        <Table meteorites={meteorites}/>
+      </div>
     </>
   )
 }
