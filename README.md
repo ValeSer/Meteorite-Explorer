@@ -8,6 +8,7 @@ run
 ```npm add -D jest``` install jest for testing
 ```npm add -D @babel/preset-env @babel/preset-react``` jsx support
 ```npm install --save-dev react-test-renderer``` snapshot testing
+```npm install --save-dev @testing-library/jest-dom eslint-plugin-jest-dom```
 
 
 ### Backend
