@@ -8,9 +8,11 @@ import CircleLoader from "react-spinners/ClipLoader";
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const searchMeteorites = (searchTerm) => {
     setLoading(true);
+    setError(false);
     
     axios.get('http://localhost:8080', {params: {searchTerm: searchTerm}})
         .then((response) => {
@@ -20,6 +22,7 @@ const Home = () => {
         })
         .catch(error => {
           console.error('error', error);
+          setError(true);
         })
         .finally(() => {
           setLoading(false);
@@ -44,6 +47,7 @@ const Home = () => {
           aria-label="Loading Spinner"
           data-testid="loader"
       />
+      {error && <div className='error'>Error</div> }
     </>
   )
 }
