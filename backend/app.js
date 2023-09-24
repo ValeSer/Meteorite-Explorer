@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
     })
     .catch(function (error) {
       console.log(error.toJSON());
+      res.sendStatus(500);
     });
 });
 
