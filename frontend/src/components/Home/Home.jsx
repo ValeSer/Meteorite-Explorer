@@ -6,8 +6,10 @@ import Search from '../Search/Search';
 
 const Home = () => {
   const [meteorites, setMeteorites] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const searchMeteorites = (searchTerm) => {
+    setLoading(true);
     
     axios.get('http://localhost:8080', {params: {searchTerm: searchTerm}})
         .then((response) => {
@@ -17,14 +19,16 @@ const Home = () => {
         })
         .catch(error => {
           console.error('error', error);
+        })
+        .finally(() => {
+          setLoading(false);
         });
-      }
+  }
   
   useEffect(() => {
       searchMeteorites('')
   }, []);
    
-
   return (
     <>
       <h1 className='title'>Meteorite Explorer</h1>
