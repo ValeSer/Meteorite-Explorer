@@ -37,8 +37,12 @@
 
     .label {
       display: block;
-      width: 100%;
       
+    }
+
+    .cell {
+      display: flex;
+      width: 100%;
     }
 
     .element {
