@@ -18,11 +18,14 @@ const Meteorite = (props) => {
   return (
     <div className='row'>
 
-      <div className='name'>
+      <div className='cell name'>
         <div className='label'>Name:</div>
         <div className='element'>{props.data.name}</div>
       </div>
-      <div className='id'>{props.data.id}</div>
+      <div className='cell id'>
+        <div className='label'>Id:</div>
+        <div className='element'>{props.data.id}</div>
+      </div>
       <div className='nametype'>{props.data.nametype}</div>
       <div className='recclass'>{props.data.recclass}</div>
       <div className='mass'>{props.data.mass}</div>
