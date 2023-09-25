@@ -24,6 +24,9 @@
     
   &:nth-child(even) {background: white}
     
+  .label {
+    display: none;
+  }
 }
 
 
@@ -32,9 +35,14 @@
   .row {
     flex-direction: column;
 
-    span {
+    .label {
       display: block;
+      width: 100%;
+      
+    }
 
+    .element {
+      text-align: right;
     }
   }
 }
